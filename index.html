@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rufus Pump Service | Licensed Pump Installation, Repair & Training – Lusaka</title>
+  <meta name="description" content="Rufus Pump Service – Licensed pump technicians in Lusaka offering installation, repairs, component replacement, automation, spares, remote assistance and technician training." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    html { scroll-behavior: smooth; }
+    .service-card:hover { transform: translateY(-4px); }
+    .invoice-preview { font-family: 'Courier New', monospace; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <div class="flex items-center gap-2">
+          <div class="bg-brand-600 text-white p-2 rounded-lg">
+            <i class="fas fa-tint text-xl"></i>
+          </div>
+          <div>
+            <span class="font-bold text-xl text-brand-800">Rufus</span>
+            <span class="text-brand-600 font-semibold"> Pump Service</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+          <a href="#home" class="hover:text-brand-600">Home</a>
+          <a href="#services" class="hover:text-brand-600">Services</a>
+          <a href="#training" class="hover:text-brand-600">Training</a>
+          <a href="#remote" class="hover:text-brand-600">Remote Help</a>
+          <a href="#invoice" class="hover:text-brand-600">Invoices</a>
+          <a href="#contact" class="bg-brand-600 text-white px-4 py-2 rounded-lg hover:bg-brand-700 transition">Contact</a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden text-2xl text-brand-700">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t px-4 py-3 space-y-3">
+      <a href="#home" class="block py-2">Home</a>
+      <a href="#services" class="block py-2">Services</a>
+      <a href="#training" class="block py-2">Training</a>
+      <a href="#remote" class="block py-2">Remote Help</a>
+      <a href="#invoice" class="block py-2">Invoices</a>
+      <a href="#contact" class="block py-2 font-semibold text-brand-600">Contact Us</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="bg-gradient-to-br from-brand-800 via-brand-700 to-brand-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 py-20 sm:py-28 flex flex-col lg:flex-row items-center gap-12">
+      <div class="lg:w-1/2">
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur px-3 py-1 rounded-full text-sm mb-6">
+          <i class="fas fa-certificate text-yellow-300"></i>
+          <span>Licensed & Certified Pump Technicians</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-bold leading-tight mb-6">
+          Expert Pump Solutions.<br>
+          <span class="text-blue-200">Installation • Repair • Training</span>
+        </h1>
+        <p class="text-lg text-blue-100 mb-8 max-w-lg">
+          From industrial pumps to automation systems — we install, repair, replace components, supply spares, and train the next generation of technicians. Remote assistance available.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#services" class="bg-white text-brand-800 font-semibold px-6 py-3 rounded-lg hover:bg-blue-50 transition">
+            View Services
+          </a>
+          <a href="#remote" class="border-2 border-white/60 text-white font-semibold px-6 py-3 rounded-lg hover:bg-white/10 transition">
+            Request Remote Help
+          </a>
+        </div>
+      </div>
+      <div class="lg:w-1/2 flex justify-center">
+        <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 shadow-2xl max-w-md w-full">
+          <h3 class="text-xl font-semibold mb-4">Quick Service Request</h3>
+          <form id="quick-form" class="space-y-4">
+            <input type="text" placeholder="Your Name" class="w-full px-4 py-2.5 rounded-lg bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+            <input type="tel" placeholder="Phone Number" class="w-full px-4 py-2.5 rounded-lg bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+            <select class="w-full px-4 py-2.5 rounded-lg bg-white/90 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300">
+              <option value="">Select Service Needed</option>
+              <option>Pump Installation</option>
+              <option>Pump Repair</option>
+              <option>Component Replacement</option>
+              <option>Automation Configuration</option>
+              <option>Spares & Accessories</option>
+              <option>Remote Assistance</option>
+              <option>Technician Training</option>
+            </select>
+            <button type="submit" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-semibold py-3 rounded-lg transition">
+              Request Callback
+            </button>
+          </form>
+          <p class="text-xs text-blue-200 mt-3 text-center">We typically respond within 1–2 hours during business hours</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust bar -->
+  <div class="bg-white border-b">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex flex-wrap justify-center gap-8 sm:gap-16 text-center text-sm text-gray-600">
+      <div class="flex items-center gap-2">
+        <i class="fas fa-shield-alt text-brand-600 text-xl"></i>
+        <span>Licensed Technicians</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <i class="fas fa-clock text-brand-600 text-xl"></i>
+        <span>Fast Response</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <i class="fas fa-tools text-brand-600 text-xl"></i>
+        <span>All Major Brands</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <i class="fas fa-headset text-brand-600 text-xl"></i>
+        <span>Remote Support</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <section id="services" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">Our Services</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Complete pump solutions for industrial, commercial and agricultural clients. We work with all major brands.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Installation -->
+        <div class="service-card bg-white rounded-xl shadow-md p-6 border border-gray-100 transition duration-300">
+          <div class="w-14 h-14 bg-blue-100 text-brand-600 rounded-xl flex items-center justify-center text-2xl mb-4">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Pump Installation</h3>
+          <p class="text-gray-600 text-sm mb-4">Professional installation of centrifugal, submersible, positive displacement and specialized pumps. Correct sizing, alignment and commissioning.</p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Site assessment & design</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Piping & electrical works</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Testing & handover</li>
+          </ul>
+        </div>
+
+        <!-- Repairs -->
+        <div class="service-card bg-white rounded-xl shadow-md p-6 border border-gray-100 transition duration-300">
+          <div class="w-14 h-14 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center text-2xl mb-4">
+            <i class="fas fa-wrench"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Pump Repairs</h3>
+          <p class="text-gray-600 text-sm mb-4">Diagnosis and repair of mechanical seals, bearings, impellers, shafts, motors and control systems. Workshop and on-site service.</p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Fault diagnosis</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Seal & bearing replacement</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Performance restoration</li>
+          </ul>
+        </div>
+
+        <!-- Component Replacement -->
+        <div class="service-card bg-white rounded-xl shadow-md p-6 border border-gray-100 transition duration-300">
+          <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-2xl mb-4">
+            <i class="fas fa-exchange-alt"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Component Replacement</h3>
+          <p class="text-gray-600 text-sm mb-4">Genuine and high-quality aftermarket parts. Impellers, mechanical seals, shafts, wear rings, motors, and control boards.</p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li><i class="fas fa-check text-green-500 mr-2"></i>OEM & compatible parts</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Fast sourcing</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Proper fitting & testing</li>
+          </ul>
+        </div>
+
+        <!-- Automation -->
+        <div class="service-card bg-white rounded-xl shadow-md p-6 border border-gray-100 transition duration-300">
+          <div class="w-14 h-14 bg-green-100 text-green-600 rounded-xl flex items-center justify-center text-2xl mb-4">
+            <i class="fas fa-microchip"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Automation Configurations</h3>
+          <p class="text-gray-600 text-sm mb-4">VFD setup, PLC integration, level control, pressure systems, SCADA connectivity and smart pump monitoring.</p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li><i class="fas fa-check text-green-500 mr-2"></i>VFD programming</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Sensor & control panels</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Remote monitoring setup</li>
+          </ul>
+        </div>
+
+        <!-- Spares & Accessories -->
+        <div class="service-card bg-white rounded-xl shadow-md p-6 border border-gray-100 transition duration-300">
+          <div class="w-14 h-14 bg-red-100 text-red-600 rounded-xl flex items-center justify-center text-2xl mb-4">
+            <i class="fas fa-boxes"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Spares & Accessories</h3>
+          <p class="text-gray-600 text-sm mb-4">Stock of common spares plus special order. Couplings, base plates, valves, strainers, gauges, cables and more.</p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Common spares in stock</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Custom orders</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Delivery available</li>
+          </ul>
+        </div>
+
+        <!-- Emergency -->
+        <div class="service-card bg-white rounded-xl shadow-md p-6 border border-gray-100 transition duration-300">
+          <div class="w-14 h-14 bg-yellow-100 text-yellow-600 rounded-xl flex items-center justify-center text-2xl mb-4">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Emergency Call-Outs</h3>
+          <p class="text-gray-600 text-sm mb-4">Priority response for critical pump failures. Available for industrial and commercial clients on service contracts.</p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li><i class="fas fa-check text-green-500 mr-2"></i>24/7 options available</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Contract priority</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Rapid diagnosis</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Training -->
+  <section id="training" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-block bg-brand-100 text-brand-700 text-sm font-semibold px-3 py-1 rounded-full mb-4">
+            Technician Academy
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Train the Next Generation of Pump Technicians</h2>
+          <p class="text-gray-600 mb-6">
+            We offer practical, hands-on training for new and existing technicians. Learn correct installation practices, diagnosis techniques, seal and bearing work, basic automation and safety.
+          </p>
+          <div class="space-y-4 mb-8">
+            <div class="flex gap-3">
+              <div class="flex-shrink-0 w-8 h-8 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center">
+                <i class="fas fa-book-open text-sm"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">Fundamentals Course</h4>
+                <p class="text-sm text-gray-600">Pump types, selection, installation best practices, safety.</p>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <div class="flex-shrink-0 w-8 h-8 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center">
+                <i class="fas fa-tools text-sm"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">Repair & Overhaul Workshop</h4>
+                <p class="text-sm text-gray-600">Disassembly, inspection, seal replacement, balancing, reassembly.</p>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <div class="flex-shrink-0 w-8 h-8 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center">
+                <i class="fas fa-laptop-code text-sm"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">Automation & Controls Intro</h4>
+                <p class="text-sm text-gray-600">VFDs, basic PLC, level/pressure control, troubleshooting.</p>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="inline-flex items-center gap-2 bg-brand-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-brand-700 transition">
+            Enquire About Training <i class="fas fa-arrow-right text-sm"></i>
+          </a>
+        </div>
+        <div class="bg-gradient-to-br from-brand-50 to-blue-100 rounded-2xl p-8 border border-brand-100">
+          <h3 class="text-xl font-semibold mb-4 text-brand-900">Who Should Attend?</h3>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex items-start gap-2">
+              <i class="fas fa-user-graduate text-brand-600 mt-1"></i>
+              <span>New technicians and apprentices starting in the field</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-hard-hat text-brand-600 mt-1"></i>
+              <span>Maintenance teams who need stronger pump skills</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-building text-brand-600 mt-1"></i>
+              <span>Companies that want internal competence building</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-certificate text-brand-600 mt-1"></i>
+              <span>Individuals seeking practical certification pathways</span>
+            </li>
+          </ul>
+          <div class="mt-6 p-4 bg-white rounded-xl shadow-sm">
+            <p class="text-sm text-gray-600 mb-2"><strong>Formats available:</strong></p>
+            <p class="text-sm">On-site at your facility • Our workshop • Small group sessions • Mentorship for new hires</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Remote Assistance -->
+  <section id="remote" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">Remote Assistance</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Stuck on a pump problem? Get expert guidance without waiting for a site visit. Video call, photo diagnosis, or step-by-step remote support.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+        <div class="bg-white rounded-xl p-6 shadow-md text-center">
+          <div class="w-16 h-16 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+            <i class="fas fa-video"></i>
+          </div>
+          <h3 class="font-semibold text-lg mb-2">Video Support Call</h3>
+          <p class="text-sm text-gray-600">Live video session. Show us the pump and we guide you through diagnosis and fixes.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-md text-center">
+          <div class="w-16 h-16 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+            <i class="fas fa-camera"></i>
+          </div>
+          <h3 class="font-semibold text-lg mb-2">Photo / Video Diagnosis</h3>
+          <p class="text-sm text-gray-600">Send clear photos or short videos of the issue. We analyse and reply with recommendations.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-md text-center">
+          <div class="w-16 h-16 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+            <i class="fas fa-clipboard-list"></i>
+          </div>
+          <h3 class="font-semibold text-lg mb-2">Step-by-Step Guidance</h3>
+          <p class="text-sm text-gray-600">Written or recorded procedures tailored to your specific pump and situation.</p>
+        </div>
+      </div>
+
+      <!-- Remote request form -->
+      <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+        <h3 class="text-xl font-semibold mb-6 text-center">Request Remote Assistance</h3>
+        <form id="remote-form" class="space-y-4">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <input type="text" placeholder="Your Name *" required class="px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none">
+            <input type="tel" placeholder="Phone / WhatsApp *" required class="px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none">
+          </div>
+          <input type="email" placeholder="Email" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none">
+          <select required class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none">
+            <option value="">Preferred Support Type *</option>
+            <option>Video Call (WhatsApp / Zoom / Teams)</option>
+            <option>Photo / Video Diagnosis</option>
+            <option>Written Guidance Only</option>
+            <option>Urgent – Call me ASAP</option>
+          </select>
+          <textarea rows="4" placeholder="Describe the problem (pump type, symptoms, error codes, what you already tried...)" required class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none"></textarea>
+          <div class="flex items-center gap-2 text-sm text-gray-600">
+            <input type="checkbox" id="photos" class="rounded">
+            <label for="photos">I can send photos or a short video</label>
+          </div>
+          <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3 rounded-lg transition">
+            Submit Remote Support Request
+          </button>
+        </form>
+        <p class="text-xs text-center text-gray-500 mt-4">We aim to respond within a few hours during working hours. Emergency clients on contract get priority.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Invoice Generator -->
+  <section id="invoice" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">Online Invoice Generator</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Create professional invoices for your customers instantly. Fill in the details, preview, and download or print.</p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-10">
+        <!-- Form -->
+        <div class="bg-gray-50 rounded-2xl p-6 sm:p-8 border border-gray-200">
+          <h3 class="text-lg font-semibold mb-5">Invoice Details</h3>
+          <form id="invoice-form" class="space-y-4">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Invoice Number</label>
+                <input type="text" id="inv-number" value="INV-2026-001" class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-brand-500 outline-none">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Date</label>
+                <input type="date" id="inv-date" class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-brand-500 outline-none">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">Customer Name / Company</label>
+              <input type="text" id="cust-name" placeholder="Customer or company name" class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-brand-500 outline-none">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">Customer Address / Contact</label>
+              <textarea id="cust-address" rows="2" placeholder="Address, phone, email" class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-brand-500 outline-none"></textarea>
+            </div>
+
+            <div class="border-t pt-4">
+              <label class="block text-sm font-medium text-gray-700 mb-2">Line Items</label>
+              <div id="line-items" class="space-y-3">
+                <!-- JS will populate -->
+              </div>
+              <button type="button" id="add-item" class="mt-3 text-sm text-brand-600 font-medium hover:underline">
+                + Add another item
+              </button>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Tax / VAT %</label>
+                <input type="number" id="tax-rate" value="0" min="0" step="0.1" class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-brand-500 outline-none">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Notes / Payment Terms</label>
+                <input type="text" id="inv-notes" placeholder="e.g. Payment due within 14 days" class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-brand-500 outline-none">
+              </div>
+            </div>
+
+            <div class="flex gap-3 pt-2">
+              <button type="button" id="preview-invoice" class="flex-1 bg-brand-600 text-white py-2.5 rounded-lg font-semibold hover:bg-brand-700 transition">
+                Preview Invoice
+              </button>
+              <button type="button" id="print-invoice" class="flex-1 bg-gray-800 text-white py-2.5 rounded-lg font-semibold hover:bg-gray-900 transition">
+                Print / Download
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Preview -->
+        <div>
+          <div id="invoice-preview" class="bg-white border-2 border-gray-200 rounded-xl p-6 sm:p-8 shadow-sm min-h-[500px]">
+            <div class="text-center text-gray-400 py-20">
+              <i class="fas fa-file-invoice text-5xl mb-4"></i>
+              <p>Fill the form and click <strong>Preview Invoice</strong> to see it here.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-brand-900 text-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid lg:grid-cols-2 gap-12">
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4">Get in Touch</h2>
+          <p class="text-blue-200 mb-8">Ready to book a service, discuss training, or need urgent support? Contact us today.</p>
+          
+          <div class="space-y-5">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-brand-700 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <p class="font-semibold">Phone / WhatsApp</p>
+                <p class="text-blue-200">
+                  <a href="tel:0979473294" class="hover:underline">0979 473 294</a> / 
+                  <a href="tel:0767468267" class="hover:underline">0767 468 267</a>
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-brand-700 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <p class="font-semibold">Email</p>
+                <p class="text-blue-200">
+                  <a href="mailto:samuelkaumba23@gmail.com" class="hover:underline">samuelkaumba23@gmail.com</a>
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-brand-700 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <p class="font-semibold">Service Area</p>
+                <p class="text-blue-200">Lusaka & surrounding areas<br>Remote support available nationwide</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-brand-700 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-id-card"></i>
+              </div>
+              <div>
+                <p class="font-semibold">Licensed Technician</p>
+                <p class="text-blue-200">Licence No: <strong>ZA537</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur rounded-2xl p-8">
+          <h3 class="text-xl font-semibold mb-5">Send a Message</h3>
+          <form id="contact-form" class="space-y-4">
+            <input type="text" placeholder="Your Name *" required class="w-full px-4 py-2.5 rounded-lg bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-300">
+            <input type="email" placeholder="Email *" required class="w-full px-4 py-2.5 rounded-lg bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-300">
+            <input type="tel" placeholder="Phone" class="w-full px-4 py-2.5 rounded-lg bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-300">
+            <select class="w-full px-4 py-2.5 rounded-lg bg-white/90 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300">
+              <option>General Enquiry</option>
+              <option>Service Booking</option>
+              <option>Training Enquiry</option>
+              <option>Remote Assistance</option>
+              <option>Spares Quote</option>
+            </select>
+            <textarea rows="4" placeholder="Your message..." required class="w-full px-4 py-2.5 rounded-lg bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-300"></textarea>
+            <button type="submit" class="w-full bg-white text-brand-800 font-semibold py-3 rounded-lg hover:bg-blue-50 transition">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-10">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div class="flex items-center gap-2">
+          <div class="bg-brand-600 text-white p-1.5 rounded">
+            <i class="fas fa-tint"></i>
+          </div>
+          <span class="text-white font-semibold">Rufus Pump Service</span>
+        </div>
+        <p class="text-sm text-center">© 2026 Rufus Pump Service • Lusaka • Licence ZA537. All rights reserved.</p>
+        <div class="flex gap-4 text-sm">
+          <a href="#services" class="hover:text-white">Services</a>
+          <a href="#training" class="hover:text-white">Training</a>
+          <a href="#remote" class="hover:text-white">Remote</a>
+          <a href="#invoice" class="hover:text-white">Invoices</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "rufus-pump-service",
+  "version": "1.0.0",
+  "description": "Rufus Pump Service – Licensed pump technicians in Lusaka",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["pump", "service", "lusaka", "zambia"],
+  "author": "Rufus Pump Service",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18"
+  }
+}
